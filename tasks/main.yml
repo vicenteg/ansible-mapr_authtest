@@ -6,6 +6,7 @@
   command: maprlogin authtest
   register: authtest
   ignore_errors: yes
+  changed_when: false
 
 - name: fail if authtest failed
   assert:
