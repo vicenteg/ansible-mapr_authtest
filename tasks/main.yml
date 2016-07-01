@@ -2,8 +2,8 @@
 # tasks file for mapr_authtest
 
 - name: check that maprlogin has been run successfully
-  sudo: yes
-  sudo_user: '{{mapr_admin_username}}'
+  become: yes
+  become_user: '{{mapr_admin_username}}'
   command: maprlogin authtest
   register: authtest
   ignore_errors: yes
